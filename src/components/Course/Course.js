@@ -1,6 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { updateCourses, hideCoursebar, showCoursebar } from "../../actions";
+import {
+  updateCourses,
+  hideCoursebar,
+  showCoursebar,
+  displayCourseDetail,
+} from "../../actions";
 
 class Course extends React.Component {
   drag = (e) => {
@@ -19,7 +24,8 @@ class Course extends React.Component {
   allowDrop = (e) => {
     e.preventDefault();
   };
-  removeACourse(courseToRemove, option) {
+  removeACourse(e, courseToRemove, option) {
+    e.stopPropagation();
     const year = this.props.year;
     const newRequirements = { ...this.props.programRequirements };
     switch (year) {
@@ -95,6 +101,7 @@ class Course extends React.Component {
           draggable="true"
           onDragStart={this.drag}
           onDragOver={this.noAllowDrop}
+          onClick={() => this.props.displayCourseDetail(this.props.course)}
         >
           <div className="info-course ml-1">
             <i className="fas fa-info-circle"></i>
@@ -109,7 +116,7 @@ class Course extends React.Component {
           <div className="remove-course ml-1">
             <i
               className="fas fa-minus-circle"
-              onClick={() => this.removeACourse(this.props.course, true)}
+              onClick={(e) => this.removeACourse(e, this.props.course, true)}
             ></i>
           </div>
           <div className="course-title option">
@@ -126,11 +133,14 @@ class Course extends React.Component {
       );
     } else {
       return (
-        <li className="course-container mx-2 mb-2 py-2 px-2">
+        <li
+          className="course-container mx-2 mb-2 py-2 px-2"
+          onClick={() => this.props.displayCourseDetail(this.props.course)}
+        >
           <div className="remove-course ml-1">
             <i
               className="fas fa-minus-circle"
-              onClick={() => this.removeACourse(this.props.course, false)}
+              onClick={(e) => this.removeACourse(e, this.props.course, false)}
             ></i>
           </div>
           <div className="course-title">{this.props.course.name}</div>
@@ -151,4 +161,5 @@ export default connect(mapStateToProps, {
   updateCourses,
   hideCoursebar,
   showCoursebar,
+  displayCourseDetail,
 })(Course);

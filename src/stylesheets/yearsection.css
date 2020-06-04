@@ -75,7 +75,7 @@
 }
 .remove-course{
   float:right;
-  color: rgb(255, 0, 0, 0.3);
+  color: rgb(255, 0, 0, 0.2);
   transition: all 0.2s ease-out;
 }
 .remove-course:hover, .remove-program:hover{

@@ -36,7 +36,7 @@ class ProgramSearch extends React.Component {
       for (let i = 0; i < this.props.programs.length; i++) {
         if (
           this.props.programs[i].code === program.code ||
-          this.props.programs[i].name === program.name
+          this.props.programs[i].program === program.program
         ) {
           flag = true;
           break;
@@ -45,7 +45,7 @@ class ProgramSearch extends React.Component {
       if (!flag) {
         this.props.addProgram(program);
         this.props.fetchProgramRequirements(
-          [...this.props.programs, program],
+          [program],
           _.isEmpty(this.props.programRequirements)
             ? { first: [], second: [], third: [], fourth: [] }
             : this.props.programRequirements
@@ -54,7 +54,7 @@ class ProgramSearch extends React.Component {
     } else {
       this.props.addProgram(program);
       this.props.fetchProgramRequirements(
-        [...this.props.programs, program],
+        [program],
         _.isEmpty(this.props.programRequirements)
           ? { first: [], second: [], third: [], fourth: [] }
           : this.props.programRequirements
@@ -63,7 +63,7 @@ class ProgramSearch extends React.Component {
     this.props.hideProgrambar();
   };
   renderResults() {
-    if (this.props.programResults && this.props.programResults.length > 0) {
+    if (this.props.programResults && this.props.programResults.length >= 0) {
       return this.props.programResults.map((program) => {
         return (
           <div

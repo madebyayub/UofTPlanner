@@ -1,0 +1,28 @@
+.modal-course-title{
+  color: rgb(12, 48, 101);
+  font-weight: 800;
+  font-size: x-large;
+}
+.modal-course-code{
+  font-size: x-large;
+  font-weight: 600;
+}
+.modal-course-description{
+  font-weight: 500;
+  color:grey;
+  font-size: 15px;
+}
+.modal-course-prereqs{
+  color: red;
+  font-weight: 500;
+}
+.close-modal{
+  color: rgb(12, 48, 101, 0.3);
+  cursor: pointer;
+  font-size: xx-large;
+  transition: color 0.2s ease-in;
+}
+.close-modal:hover{
+  color: rgb(12, 48, 101, 1);
+  border-bottom: 2px solid rgb(12, 48, 101);
+}

@@ -15,7 +15,7 @@ class Navbar extends React.Component {
             alt="UofT Logo"
           />
         </div>
-        <span id="brand-label">Program Planner</span>
+        <span id="brand-label">MCSS Program Planner</span>
         <div id="navbar-buttons">
           <ul className="navbar-nav right-tabs ml-auto mr-4 align-items-center">
             <li className="nav-item mr-5">

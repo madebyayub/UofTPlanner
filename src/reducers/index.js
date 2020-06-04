@@ -5,6 +5,7 @@ import AuthReducer from "./AuthReducer";
 import CoursebarReducer from "./CoursebarReducer";
 import ProgrambarReducer from "./ProgrambarReducer";
 import ProgramsReducer from "./ProgramsReducer";
+import CourseDetailReducer from "./CourseDetailReducer";
 
 export default combineReducers({
   auth: AuthReducer,
@@ -12,4 +13,5 @@ export default combineReducers({
   showCoursebar: CoursebarReducer,
   showProgrambar: ProgrambarReducer,
   selectedPrograms: ProgramsReducer,
+  courseDetail: CourseDetailReducer,
 });

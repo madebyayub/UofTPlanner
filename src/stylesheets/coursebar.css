@@ -7,7 +7,6 @@ html, body{
   width: 300px;
   top:79px;
   right: -310px;
-  z-index: 99;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, fontello, montserrat;
   box-shadow: -1px 0 20px rgba(0, 0, 0, 0.3);
   position: fixed;

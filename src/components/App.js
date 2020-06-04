@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Coursebar from "./Course/Coursebar";
 import Programbar from "./Program/Programbar";
 import YearSection from "./Main/YearSection";
+import CourseDetailModal from "./Course/CourseDetailModal";
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
         <Programbar />
         <Coursebar />
         <YearSection />
+        <CourseDetailModal />
       </React.Fragment>
     );
   }

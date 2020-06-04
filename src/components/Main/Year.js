@@ -84,13 +84,12 @@ class Year extends React.Component {
         />
       );
     });
-    let i = 0;
     const optional_courses = courses.options.map((course) => {
       return (
         <Course
           option
           course={course}
-          key={i++}
+          key={course}
           year={this.props.label.split(" ")[1]}
         />
       );

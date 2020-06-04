@@ -11,6 +11,17 @@ export const signOut = () => {
     type: "SIGN_OUT",
   };
 };
+export const displayCourseDetail = (course) => {
+  return {
+    type: "SHOW_DETAIL",
+    payload: course,
+  };
+};
+export const hideCourseDetail = () => {
+  return {
+    type: "HIDE_DETAIL",
+  };
+};
 export const showProgrambar = () => {
   return {
     type: "SHOW_PROGRAMBAR",
@@ -37,7 +48,6 @@ export const updateCourses = (newRequirements) => {
     payload: newRequirements,
   };
 };
-
 export const searchCourse = (course) => {
   return async (dispatch) => {
     const response = await uoftAPI.get(`/courses/${course}`);
@@ -77,7 +87,6 @@ export const fetchProgramRequirements = (programs, prev) => {
       second_options = prev.options ? [...prev.options.second_options] : [],
       third_options = prev.options ? [...prev.options.third_options] : [],
       fourth_options = prev.options ? [...prev.options.fourth_options] : [];
-
     for (let i = 0; i < programs.length; i++) {
       let program = programs[i];
       const first_response = await uoftAPI.get(
