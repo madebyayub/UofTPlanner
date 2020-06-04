@@ -1,0 +1,147 @@
+#root{
+  height:100%;
+}
+#main-container{
+  height: 100%;
+}
+#programs-selected{
+  margin-top: 80px;
+}
+#years-section{
+  display: flex;
+  justify-content: space-evenly;
+  height: 79%;
+}
+.list-courses{
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.year{
+  display: inline-block;
+  overflow-y: scroll;
+  background-color: rgba(75, 75, 75, 0.1);
+  width: 24%;
+  min-width: 225px;
+  height: 100%;
+  border: solid 1px rgba(75, 75, 75, 0.2);
+  border-radius: 8px;
+}
+.year-label{
+  color: rgba(75, 75, 75, 0.7);
+  font-size: 13px;
+  font-weight: bold;
+}
+.course-container{
+  border: solid 1px rgba(75, 75, 75, 0.2);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  font-size: small;
+  border-radius: 7px;
+  background-color: white;
+  transition: background-color 0.2s ease-out;
+}
+.course-container:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.course-title{
+  font-size: 11px;
+  font-weight: bold;
+  color: rgb(12, 48, 101)
+}
+.course-code{
+  font-weight: 800;
+  font-size: 10px;
+  color: grey;
+}
+
+.course-title.option{
+  color:orange;
+}
+.course-code.option{
+  color:orange;
+}
+.add-course-option{
+  border-radius: 7px;
+  font-size: x-small;
+  text-align: center;
+  color: whitesmoke;
+  background: rgba(39, 190, 22, 0.7);
+  transition: all 0.2s ease-out;
+}
+.add-course-option:hover{
+  background: rgba(21, 177, 4, 0.9);
+}
+.remove-course{
+  float:right;
+  color: rgb(255, 0, 0, 0.3);
+  transition: all 0.2s ease-out;
+}
+.remove-course:hover, .remove-program:hover{
+  cursor: pointer;
+  color: rgb(255, 0, 0, 0.8)
+
+}
+.info-course{
+  float:right;
+  color: rgba(75, 75, 75, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.info-course:hover{
+  cursor: pointer;
+  color: rgba(75, 75, 75, 0.6);
+}
+.program-selected{
+  display: inline-block;
+  color: darkslategrey;
+  font-size: 10px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(75, 75, 75, 0.3);
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+.program-selected.add-program{
+  background-color: green;
+  color: white;
+  border: 1px solid green;
+  transition: all 0.2s ease-in-out;
+}
+.program-selected.add-program:hover{
+  box-shadow: 0px 2px 5px green;
+  cursor: pointer;
+}
+.slideleft-enter{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.slideleft-enter-active{
+  opacity: 1;
+  transition: all 100ms ease-in-out;
+  animation: slideleft-in 100ms ease-in-out forwards;
+}
+.slideleft-leave{
+  opacity: 1;
+  transform: translateX(0%);
+}
+.slideleft-leave-active{
+  opacity: 0;
+  transition: all 100ms ease-in-out;
+  animation: slideleft-out 100ms ease-in-out forwards;
+}
+@keyframes slideleft-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideleft-out {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

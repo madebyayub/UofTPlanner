@@ -1,0 +1,62 @@
+#navbar {
+  width: 100%;
+  position: fixed;
+  background-color: rgb(12, 48, 101);
+  color: whitesmoke;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+}
+
+#navbar a{
+  color: whitesmoke;
+}
+
+#navbar img{
+  max-width: 125px;
+}
+#navbar-buttons{
+  margin-left: auto;
+}
+#brand-label{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, fontello, montserrat;
+  font-size:20px;
+  font-weight: 200;
+  margin-top:13px;
+}
+#google-logo{
+  max-width: 25px!important;
+}
+
+#profile-logo{
+  max-width: 30px!important;
+  border-radius: 50%;
+}
+.add-course{
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+.add-course:hover{
+  background-color: whitesmoke;
+  border-radius: 2px;
+  color:rgb(12, 48, 101);
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+}
+.google-login{
+  font-size: 14px;
+  color: rgba(0,0,0,0.5);
+  font-weight: 700;
+  border-radius: 2px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+}
+.google-login.logged-in{
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+}
+.google-login:focus{
+  outline:0;
+}
+.add-course:focus{
+  outline:0;
+}

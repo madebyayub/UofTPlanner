@@ -1,0 +1,49 @@
+.remove-program {
+  color: rgb(255, 0, 0, 0.6)
+}
+.remove-program, .program-label, .add-program{
+  display: inline-block;
+}
+.slide-enter{
+  opacity: 0;
+  transform: translateY(100%);
+}
+.slide-enter-active{
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+  animation: slide-in 300ms ease-in-out forwards;
+}
+.slide-leave{
+  opacity: 1;
+  transform: translateY(0%);
+}
+.slide-leave-active{
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  animation: slide-out 300ms ease-in-out forwards;
+}
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+::-webkit-scrollbar{
+  width: 2px;
+}
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background: rgba(12, 48, 101, 0.4);
+}
