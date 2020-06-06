@@ -1,17 +1,10 @@
-export default (state = {}, action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case "ADD_PROGRAM":
-      if (state.selectedPrograms) {
-        return {
-          ...state,
-          selectedPrograms: [...state.selectedPrograms, action.payload],
-        };
-      } else {
-        return {
-          ...state,
-          selectedPrograms: action.payload,
-        };
-      }
+      return {
+        ...state,
+        selectedPrograms: [...state.selectedPrograms, action.payload],
+      };
     case "REMOVE_PROGRAM":
       return {
         ...state,
