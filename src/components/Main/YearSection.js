@@ -82,8 +82,8 @@ class YearSection extends React.Component {
   }
   render() {
     return (
-      <div id="main-container" className="pt-3 px-2">
-        <div id="programs-selected" className="ml-5 mb-3">
+      <div id="main-container" className="pt-2 px-2">
+        <div id="programs-selected" className="ml-5 mb-2">
           <ReactCSSTransitionGroup
             transitionName="slideleft"
             transitionEnterTimeout={100}

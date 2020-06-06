@@ -1,4 +1,4 @@
-export default (state = [], action) => {
+export default (state = {}, action) => {
   switch (action.type) {
     case "ADD_PROGRAM":
       return {
@@ -21,6 +21,12 @@ export default (state = [], action) => {
       return {
         ...state,
         programRequirements: action.payload,
+      };
+    case "FETCH_PREVIOUS":
+      return {
+        ...state,
+        programRequirements: action.payload.programRequirements,
+        selectedPrograms: action.payload.selectedPrograms,
       };
     case "UPDATE_COURSES":
       return {

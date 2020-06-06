@@ -2,10 +2,20 @@ import React from "react";
 import { connect } from "react-redux";
 
 import GoogleAuth from "./GoogleAuth";
-import { showCoursebar } from "../actions";
+import { showCoursebar, hideCoursebar } from "../actions";
 import "../stylesheets/navbar.css";
 
 class Navbar extends React.Component {
+  componentDidMount() {
+    this.props.hideCoursebar();
+  }
+  toggleCoursebar() {
+    if (this.props.coursebar && this.props.coursebar.showCoursebar) {
+      this.props.hideCoursebar();
+    } else if (this.props.coursebar && !this.props.coursebar.showCoursebar) {
+      this.props.showCoursebar();
+    }
+  }
   render() {
     return (
       <nav id="navbar" className="navbar navbar-expand-lg p-0">
@@ -20,13 +30,13 @@ class Navbar extends React.Component {
           <ul className="navbar-nav right-tabs ml-auto mr-4 align-items-center">
             <li className="nav-item mr-5">
               <div>
-                <button
+                <div
                   className="add-course py-2 px-3 show-coursebar"
-                  onClick={this.props.showCoursebar}
+                  onClick={() => this.toggleCoursebar()}
                 >
                   <i className="fas fa-plus mr-2"></i>
                   Add Course
-                </button>
+                </div>
               </div>
             </li>
             <li className="nav-item">
@@ -45,4 +55,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { showCoursebar })(Navbar);
+export default connect(mapStateToProps, { showCoursebar, hideCoursebar })(
+  Navbar
+);

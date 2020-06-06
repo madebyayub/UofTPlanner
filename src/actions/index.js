@@ -11,6 +11,12 @@ export const signOut = () => {
     type: "SIGN_OUT",
   };
 };
+export const fetchPreviousState = (userID) => {
+  return async (dispatch) => {
+    const response = await uoftAPI.get(`/user/${userID}`);
+    dispatch({ type: "FETCH_PREVIOUS", payload: response.data });
+  };
+};
 export const displayCourseDetail = (course) => {
   return {
     type: "SHOW_DETAIL",

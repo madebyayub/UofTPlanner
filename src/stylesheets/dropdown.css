@@ -1,0 +1,37 @@
+.hide-dropdown{
+  position: absolute;
+  padding: 0.7rem;
+  top:51px;
+  width: 268px;
+  transform: translateX(-79%);
+  background-color: black;
+  visibility: hidden;
+  overflow: hidden;
+  border-radius: 4%;
+}
+.menu-item {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.menu-item:hover{
+  background-color: rgba(73,73,73, 0.1);
+}
+.menu-item span{
+  font-size: medium;
+  align-items: center;
+}
+
+.show-dropdown {
+  border: 3px solid rgb(12, 48, 101);
+  font-size: x-large;
+  color: rgb(12, 48, 101);
+  position: absolute;
+  top:60px;
+  width: 170px;
+  transform: translateX(-59%);
+  background-color: rgba(255,255,255,0.8);
+  overflow: hidden;
+  border-radius: 4%;
+}

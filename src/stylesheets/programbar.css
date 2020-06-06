@@ -45,8 +45,8 @@ html, body{
   height: 100%;
 }
 #programbar .result-section{
-  max-height: 65%;
-  height: 65%;
+  max-height: 63%;
+  height: 63%;
   overflow-y: scroll;
 }
 #programbar .result-name{
