@@ -15,7 +15,7 @@ class CourseSearch extends React.Component {
       <input
         className="form-control form-control-lg mx-3"
         type="text"
-        placeholder="Search by course code or title"
+        placeholder="Search by course code"
         autoComplete="off"
         onChange={formProps.input.onChange}
         value={formProps.input.value}
