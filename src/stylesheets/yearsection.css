@@ -21,7 +21,7 @@
 .year{
   display: inline-block;
   overflow-y: scroll;
-  background-color: rgba(75, 75, 75, 0.1);
+  background-color: #fafafa;
   width: 24%;
   min-width: 225px;
   height: 100%;
